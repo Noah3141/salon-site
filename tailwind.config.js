@@ -27,6 +27,9 @@ module.exports = {
                     700: "rgb(81, 95, 115)",
                 },
             },
+            backgroundImage: {
+                "paper-back": "url('../images/white_wall_hash.png')",
+            },
         },
     },
     plugins: [],

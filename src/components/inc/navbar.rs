@@ -13,7 +13,6 @@ pub fn home() -> Html {
             <div class="navbar-link">{"Stylists"}</div>
             <div class="navbar-link">{"Gallery"}</div>
             <div class="navbar-link">{"Contact"}</div>
-    
         </div>
     }
 }
