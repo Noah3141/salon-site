@@ -630,14 +630,6 @@ video {
   font-weight: 700;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.-z-10 {
-  z-index: -10;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }

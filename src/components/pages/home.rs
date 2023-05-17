@@ -50,6 +50,7 @@ pub fn home() -> Html {
             <div class="px-16 py-12">
                 <div>
                     <h1 class="title text-zinc-200 text-center">{"Reviews"}</h1>
+                    <p>{"Under development now!"}</p>
                 </div>
             </div>
         </section>
