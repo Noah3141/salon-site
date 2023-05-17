@@ -5,7 +5,6 @@ use yew::prelude::*;
 #[function_component(Home)]
 pub fn home() -> Html {
 
-    Document::get_element_by_id(&self, element_id)
     html! {
         <>
         <header><img class="bg-fixed w-full" src="../images/woman.jpg" alt="Woman"/></header>
@@ -26,7 +25,7 @@ pub fn home() -> Html {
                     // Right hand side
                     <div class="px-4 ">
                         <h1 class="title text-zinc-800 pb-8">{"Welcome"}</h1>
-                        <p class="text-zinc-500">{"Our goal at Flourish is to give each client an exceptional hair design that reflects their unique personality and compliments their lifestyle. We view hair as an art. Each style is suited specifically to the clients request, and is composed with practiced hands and delivered with outstanding expertise. "}</p>
+                        <p class="text-zinc-500">{"Our goal at Salon is to give each client an exceptional hair design that reflects their unique personality and compliments their lifestyle. We view hair as an art. Each style is suited specifically to the client's request, and is composed with practiced hands and delivered with outstanding expertise. "}</p>
                         
                         <div class="flex flex-row gap-6 pt-8">
                             <svg class="fill-rose-400 cursor-pointer hover:fill-rose-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32"  class="bi bi-facebook" viewBox="0 0 16 16">
