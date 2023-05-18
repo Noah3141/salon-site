@@ -2,6 +2,10 @@
 module.exports = {
     content: ["./src/**/*.{html,rs}", "./index.html"],
     theme: {
+        fontFamily: {
+            headliner: ['"Wix Madefor Text"'],
+            body: ["Raleway"],
+        },
         extend: {
             colors: {
                 primary: "rgb(251, 113, 133)",

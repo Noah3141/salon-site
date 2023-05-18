@@ -9,7 +9,7 @@ pub fn home() -> Html {
         <>
         <header><img class="bg-fixed w-full" src="../images/woman.jpg" alt="Woman"/></header>
 
-        <section>
+        <section class="font-body">
             <div class="bg-paper-back w-full px-8 py-32 bg-zinc-50">
                 // Row
                 <div class="container md:grid grid-cols-2 gap-2">
@@ -24,8 +24,8 @@ pub fn home() -> Html {
                     </div>
                     // Right hand side
                     <div class="px-4 ">
-                        <h1 class="title text-zinc-800 pb-8">{"Welcome"}</h1>
-                        <p class="text-zinc-500">{"Our goal at Salon is to give each client an exceptional hair design that reflects their unique personality and compliments their lifestyle. We view hair as an art. Each style is suited specifically to the client's request, and is composed with practiced hands and delivered with outstanding expertise. "}</p>
+                        <h1 class="title text-zinc-800 pb-6">{"WELCOME"}</h1>
+                        <p class="text-zinc-600">{"Our goal at Salon is to give each client an exceptional hair design that reflects their unique personality and compliments their lifestyle. We view hair as an art. Each style is suited specifically to the client's request, and is composed with practiced hands and delivered with outstanding expertise. "}</p>
                         
                         <div class="flex flex-row gap-6 pt-8">
                             <svg class="fill-rose-400 cursor-pointer hover:fill-rose-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32"  class="bi bi-facebook" viewBox="0 0 16 16">
@@ -46,11 +46,38 @@ pub fn home() -> Html {
         </section>
 
 
-        <section class="bg-zinc-800 h-96 py">
-            <div class="px-16 py-12">
-                <div>
-                    <h1 class="title text-zinc-200 text-center">{"Reviews"}</h1>
-                    <p>{"Under development now!"}</p>
+        <section class="font-body bg-zinc-700 h-full">
+            <div class="text-zinc-200 px-16 py-12">
+                <div class="">
+                    // Title
+                    <h1 class="title text-center">{"REVIEWS"}</h1>
+                    // First
+                    <div class="p-4 my-4 w-2/3 font-body border-2 border-zinc-200 rounded-md">
+                        <p class="">
+                            <i>{"I think they're neat."}</i>
+                        </p>
+                        <p class="text-right">
+                            {"Jennifer"}
+                        </p>
+                    </div>
+                    // Second
+                    <div class="mr-auto p-4 my-4 mr-0 w-2/3 font-body border-2 border-zinc-200 rounded-md">
+                        <p class="text-right">
+                            <i>{"This is one of the Salon's in the world."}</i>
+                        </p>
+                        <p class="text-left">
+                            {"Samantha"}
+                        </p>
+                    </div>
+                    //Third
+                    <div class="p-4 my-4 w-2/3 font-body border-2 border-zinc-200 rounded-md">
+                        <p class="text-left">
+                            <i>{"They did technically do my hair."}</i>
+                        </p>
+                        <p class="text-right">
+                            {"Andrea"}
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
