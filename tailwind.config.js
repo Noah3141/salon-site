@@ -33,6 +33,8 @@ module.exports = {
             },
             backgroundImage: {
                 "paper-back": "url('../images/white_wall_hash.png')",
+                "sidebar-back": "url('../images/layered-peaks-haikei-sidebar.svg')",
+                "grid-back": "url('../images/low-poly-grid-haikei.png')",
             },
         },
     },

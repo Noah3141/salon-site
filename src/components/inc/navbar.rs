@@ -1,8 +1,12 @@
+
 use yew::prelude::*;
 
 
 #[function_component(Navbar)]
 pub fn home() -> Html {
+    
+    let counter = use_state(|| 0);
+
     html! { 
         
 
