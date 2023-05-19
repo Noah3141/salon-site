@@ -35,6 +35,7 @@ module.exports = {
                 "paper-back": "url('../images/white_wall_hash.png')",
                 "sidebar-back": "url('../images/layered-peaks-haikei-sidebar.svg')",
                 "grid-back": "url('../images/low-poly-grid-haikei.png')",
+                "bottombar-back": "url('../images/bottombar.svg')",
             },
         },
     },

@@ -8,9 +8,19 @@ edition = "2021"
 [dependencies]
 wasm-bindgen-futures = "0.4.34"
 wasm-bindgen = "0.2.86"
-web-sys = "0.3.61"
 yew = { version = "0.20.0", features = ["csr"] }
 yew-router = "0.17"
 reqwasm = "0.5.0"
 chrono = { version = "0.4.24", features = ["serde", "wasmbind"] }
 gloo = "0.8.0"
+gloo-events = "0.1.2"
+
+[dependencies.web-sys]
+version = "0.3.61"
+features = [
+  "Window",
+  "Document",
+  "MouseEvent",
+  "Element",
+  "NodeList"
+]

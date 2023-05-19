@@ -1,17 +1,30 @@
-use gloo::utils::document;
-use web_sys::Document;
+use gloo::utils::window;
+use wasm_bindgen::prelude::*;
 use yew::prelude::*;
 
 #[function_component(Home)]
 pub fn home() -> Html {
-
-
+    
+    let document = web_sys::window()
+        .unwrap()
+        .document()
+        .unwrap();
+    // * Links between parts of the page
+    // Navbar
+    
+    let top = Callback::from(move |_: MouseEvent| {
+        document
+        .get_element_by_id("top")
+        .unwrap()
+        .scroll_into_view();
+    });
+   
 
     html! {
         <>
-        <header><img class="bg-fixed bg-contain" src="../images/woman-backg.jpg" alt="Woman"/></header>
+        <header id="top"><img class="bg-fixed bg-contain" id="top" src="../images/woman.jpg" alt="Woman"/></header>
 
-        <section class="font-body text-xl">
+        <section id="about" class="font-body text-xl">
             <div class="bg-paper-back w-full px-8 py-32 bg-zinc-50">
                 // Row
                 <div class="container md:grid grid-cols-2 gap-2">
@@ -48,8 +61,8 @@ pub fn home() -> Html {
         </section>
 
 
-        <section class="relative font-body text-xl h-full">
-            <div class="bg-sidebar-back bg-fixed bg-cover text-zinc-200 px-16 py-12">
+        <section id="reviews" class="relative font-body text-xl h-full">
+            <div class="bg-sidebar-back bg-fixed bg-cover text-zinc-200 px-16 py-16">
                 <div class="">
                     // Title
                     <h1 class="title text-center mb-16">{"REVIEWS"}</h1>
@@ -86,45 +99,88 @@ pub fn home() -> Html {
 
 
 
-        <section class="h-16 text-zinc-800 ">
-            <div class="bg-grid-back px-16 py-12  overflow-scroll">
+        <section id="services" class="text-zinc-800 ">
+            <div class="bg-grid-back px-16 py-16">
                 <h1 class="title text-center text-zinc-800 mb-16">{"SERVICES"}</h1>
 
-                <table class="mx-0 px-0 sm:mx-4 sm:px-4 text-md sm:text-2xl font-body whitespace-nowrap">
-                    <tbody>
-                        <tr class="py-4">
+                <table class="mx-0 px-0 sm:mx-4 sm:px-4 text-lg sm:text-2xl font-body border-separate border-spacing-y-6 sm:border-spacing-y-2">
+                    <tbody class="">
+                        <tr class="">
+                            <td>{"Women's Haircut"}</td>
+                            <td>{"$55 and up"}</td>
+                        </tr>
+                            <span class="text-sm">
+                            {"Longer or thicker hair takes longer work with, and starts at $65"}
+                            </span>
+
+                        <tr class="">
+                            <td>{"Men's Haircut"}</td>
+                            <td>{"$30 and up"}</td>
+                            <td></td>
+                        </tr>
+                        <tr class="">
                             <td>{"Haircuts"}</td>
                             <td>{"$55 and up"}</td>
                             <td></td>
                         </tr>
-                        <div class="pt-6 w-full">
-                        </div>
+
+                        <div class="my-6 w-full"></div>
+
                         <span class="pr-8">{"Coloring with blow dry:"}</span>
-                        <tr class="py-4">
+                        <tr class="">
                             <td>{"Touch Up"}</td>
                             <td>{"$85 and up"}</td>
                             <td></td>
                         </tr>
-                        <tr class="py-4">
+                        <tr class="">
                             <td>{"Partial Highlight"}</td>
                             <td>{"$115 and up"}</td>
                             <td></td>
                         </tr>
-                        <tr class="py-4">
+                        <tr class="">
                             <td>{"Full Highlight"}</td>
                             <td>{"$140 and up"}</td>
                             <td></td>
                         </tr>
-                        <tr class="py-4">
+                        <tr class="">
                             <td>{"Sunkissed Bayalage"}</td>
                             <td>{"$145 and up"}</td>
                             <td></td>
                         </tr>
-                        <div class="pb-6 w-full">
-                        </div>
+                        <tr class="">
+                            <td>{"Customized Color"}</td>
+                            <td>{"To be determined at service"}</td>
+                            <td></td>
+                        </tr>
+
+                        <div class="my-3 w-full"></div>
+
+                        <tr class="py-4">
+                            <td>{"Shampoo/Blowdry"}</td>
+                            <td>{"$30 and up"}</td>
+                            <td></td>
+                        </tr>
+                        <tr class="py-4">
+                            <td>{"Shampoo/Blowdry/Soft Waves"}</td>
+                            <td>{"$35"}</td>
+                            <td></td>
+                        </tr>
                         <tr class="py-4">
                             <td>{"Bridal Hair"}</td>
                             <td>{"$400"}</td>
+                            <td></td>
+                        </tr>
+
+                        <div class="my-3 w-full"></div>
+
+                        <tr class="py-4">
+                            <td>{"Express Keratin"}</td>
+                            <td>{"$95"}</td>
+                            <td></td>
+                        </tr>
+                        <tr class="py-4">
+                            <td>{"Keratin"}</td>
+                            <td>{"$200"}</td>
                             <td></td>
                         </tr>
                     </tbody>
@@ -136,14 +192,33 @@ pub fn home() -> Html {
 
 
 
+        <section id="stylists" class="text-zinc-200 ">
+            <div class="bg-bottombar-back bg-cover py-16">
+                <h1 class="title text-center">{"STYLISTS"}</h1>
+        <div class="h-96">{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo nemo dolorem, labore ut quibusdam porro, quia suscipit obcaecati adipisci, at esse aperiam molestias doloremque laborum dolorum dolore velit. Eaque?"}</div>
+        <div class="h-96">{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo nemo dolorem, labore ut quibusdam porro, quia suscipit obcaecati adipisci, at esse aperiam molestias doloremque laborum dolorum dolore velit. Eaque?"}</div>
+        <div class="h-96">{"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quo nemo dolorem, labore ut quibusdam porro, quia suscipit obcaecati adipisci, at esse aperiam molestias doloremque laborum dolorum dolore velit. Eaque?"}</div>
+
+            </div>
+        </section>
+
+        <section id="gallery" class="">
+            <div class="py-12">
+            
+            </div>
+        </section>
+        
+        
+        
+        
+        <section id="contact" class=""></section>
         <section class=""></section>
 
 
 
-        <section class=""></section>
-
-
-
+            <div onclick={top} class="w-10 h-10 bg-zinc-800 hover:bg-zinc-900 rounded-full cursor-pointer fixed text-center font-bold bottom-6 right-6">
+                <img  class="m-auto mt-3" height="12px" width="12px" src="../images/ScrollTopIcon.svg" alt="Top"/>
+            </div>
 
         </>
     }
