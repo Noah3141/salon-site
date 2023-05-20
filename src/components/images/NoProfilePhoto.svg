@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="300" height="400" viewBox="0 0 300 400" xml:space="preserve">
+<desc>Created with Fabric.js 5.3.0</desc>
+<defs>
+</defs>
+<g transform="matrix(0.7621359226 0 0 1.0165048533 149.8091594446 199.8091594446)" id="vSC_V5D9UySEDR9YzdFb5"  >
+<path style="stroke: rgb(117,145,226); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(242,235,235); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -196.56489 -196.56489 L 196.56488000000002 -196.56489 L 196.56488000000002 196.56488000000002 L -196.56489 196.56488000000002 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(0.9842851386 0 0 1.0044706952 150 295)" id="bV_GbRjCNDcvuYH0ZZCqx"  >
+<path style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(164,162,162); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -81.27718 104.53267 L -81.27718 -47.657280000000014 C -81.27718 -47.657280000000014 -81.78712 -104.70319 0 -104.53228000000001 C 81.78712 -104.36137000000001 81.27718 -47.657280000000014 81.27718 -47.657280000000014 L 81.27718 104.53267 z" stroke-linecap="round" />
+</g>
+<g transform="matrix(1.16 0 0 1.16 150 125.607342137)" id="shoXu-pdN1Jux7rTLB65f"  >
+<path style="stroke: rgb(8,209,225); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(164,162,162); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M 0 -43.10345 C 23.7931 -43.10345 43.10345 -23.793110000000002 43.10345 0 C 43.10345 23.7931 23.793110000000002 43.10345 0 43.10345 C -23.7931 43.10345 -43.10345 23.793110000000002 -43.10345 0 C -43.10345 -23.7931 -23.793110000000002 -43.10345 0 -43.10345 z" stroke-linecap="round" />
+</g>
+</svg>

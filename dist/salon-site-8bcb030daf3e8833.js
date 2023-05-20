@@ -833,7 +833,7 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('salon-site-976e7cd46daa3690_bg.wasm', import.meta.url);
+        input = new URL('salon-site-8bcb030daf3e8833_bg.wasm', import.meta.url);
     }
     const imports = __wbg_get_imports();
 

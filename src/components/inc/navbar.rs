@@ -57,12 +57,21 @@ pub fn home() -> Html {
 
         
         <div class="navbar">
+            <div class="flex flex-row">
+                <img 
+                    src="../images/MyLogo.svg" 
+                    alt="Logo"
+                    height="50px"
+                    width="50px"
+                    class="hidden md:fixed md:left-12 md:top-1 md:inline" 
+                />
+            </div>
             <div onclick={go_to_home} class="navbar-link">{"Home"}</div>
             <div onclick={go_to_about} class="navbar-link">{"About"}</div>
             <div onclick={go_to_services} class="navbar-link">{"Services"}</div>
             <div onclick={go_to_stylists} class="navbar-link">{"Stylists"}</div>
-            <div onclick={go_to_gallery} class="navbar-link">{"Gallery"}</div>
             <div onclick={go_to_contact} class="navbar-link">{"Contact"}</div>
+            <div onclick={go_to_gallery} class="navbar-link">{"Gallery"}</div>
         </div>
     }
 }
