@@ -9,14 +9,22 @@ pub fn home() -> Html {
         .unwrap()
         .document()
         .unwrap();
-    // * Links between parts of the page
-    // Navbar
-    
+
+    let doc = document.clone();
     let top = Callback::from(move |_: MouseEvent| {
-        document
-        .get_element_by_id("top")
-        .unwrap()
-        .scroll_into_view();
+        doc
+            .get_element_by_id("top")
+            .unwrap()
+            .scroll_into_view();
+    });
+    
+    let doc = document.clone();
+    let contact_us = Callback::from(move |_: MouseEvent| {
+        doc
+            .get_element_by_id("contact")
+            .unwrap()
+            .scroll_into_view();
+
     });
    
 
@@ -52,7 +60,7 @@ pub fn home() -> Html {
                             <svg class="fill-rose-400 cursor-pointer hover:fill-rose-500" xmlns="http://www.w3.org/2000/svg" width="38" height="38"  class="bi bi-pinterest" viewBox="0 0 16 16">
                                 <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z"/>
                             </svg>
-                            <div class="button">{"GET IN TOUCH"}</div>
+                            <div onclick={contact_us} class="button text-xs pt-1 sm:pt-2 sm:text-sm">{"GET IN TOUCH"}</div>
                         </div>
                     </div>
 
@@ -199,7 +207,7 @@ pub fn home() -> Html {
                 <div class="pt-4 grid grid-cols-2"> // GRID
                     // USE CHANGES IN THE BREAKPOINT TO ALLOW FOR VARIOUS SIZES OF TEXT IN THE P TAG
                     <div class="col-span-2 xl:col-span-1 m-4 w-full " > // CELL - ROW INTERNALLY
-                        <div class="flex flex-row justify-start">
+                        <div class="flex flex-col sm:flex-row justify-start">
                         <img class="m-0" style="height: 270px" src="../images/NoProfilePhoto.svg" alt="" /> // LEFT
                         <div class="px-4 min-w-96">  // RIGHT
                             <h2 class="title">{"Andrea"}</h2>
@@ -211,7 +219,7 @@ pub fn home() -> Html {
                     </div> 
 
                     <div class="col-span-2 xl:col-span-1 m-4 w-full " >
-                        <div class="flex flex-row content-start">
+                        <div class="flex flex-col sm:flex-row content-start">
                         <img class="m-0" style="height: 270px" src="../images/NoProfilePhoto.svg" alt="" />
                         <div class="px-4 min-w-96">
                             <h2 class="title">{"Deandra"}</h2>
@@ -224,7 +232,7 @@ pub fn home() -> Html {
                     </div>
                 
                     <div class="col-span-2 xl:col-span-1 m-4 w-full " >
-                        <div class="flex flex-row content-start">
+                        <div class="flex flex-col sm:flex-row content-start">
                         <img class="m-0" style="height: 270px" src="../images/NoProfilePhoto.svg" alt="" />
                         <div class="px-4 min-w-96">
                             <h2 class="title">{"Deedee"}</h2>
@@ -237,7 +245,7 @@ pub fn home() -> Html {
                     </div>
 
                     <div class="col-span-2 xl:col-span-1 m-4 w-full " >
-                        <div class="flex flex-row content-start">
+                        <div class="flex flex-col sm:flex-row content-start">
                         <img class="m-0" style="height: 270px" src="../images/NoProfilePhoto.svg" alt="" />
                         <div class="px-4 min-w-96">
                             <h2 class="title">{"Alexandria"}</h2>
@@ -254,8 +262,8 @@ pub fn home() -> Html {
             </div>
         </section>
         <section  class="bg-rose-400">
-            <div class="flex flex-row pb-8 text-zinc-800 justify-center">
-                <div class="pe-48 font-body text-center">
+            <div class="flex flex-col sm:flex-row pb-8 text-zinc-800 justify-center">
+                <div class="pe-4  sm:pe-48 font-body text-center">
                     <h1 class="title">{"CONTACT US"}</h1>
                     <div>
                         <p>{"706-354-0054"}</p>
@@ -269,12 +277,13 @@ pub fn home() -> Html {
                         <p>{"Sunday - Closed"}</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="mt-4 sm:mt-0 mx-auto sm:mx-0 justify-center content-center">
                     <img 
                         class="border-4 border-zinc-700" 
                         width="400px" 
+                        height="200px"
                         src="../images/Salon-Lofts-storefront.jpg" 
-                        alt="" 
+                        alt="Storefront" 
                     />
                 </div>
             </div>
